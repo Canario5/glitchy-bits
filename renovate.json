@@ -1,8 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices", "group:react", "group:definitelyTyped", ":maintainLockFilesWeekly"],
+  "extends": ["config:best-practices", "group:react", "group:definitelyTyped"],
   "timezone": "Europe/Prague",
-  "schedule": ["at 4:00pm on Wednesday"],
+  "schedule": ["after 3:15pm and before 4:20pm on Thursday"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["after 3:15pm and before 4:20pm on Wednesday"]
+  },
   "npm": {
     "minimumReleaseAge": "3 days"
   },
