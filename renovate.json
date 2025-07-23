@@ -1,6 +1,20 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
+  "extends": ["config:best-practices", "group:react", "group:definitelyTyped", ":maintainLockFilesWeekly"],
+  "timezone": "Europe/Prague",
+  "schedule": ["at 4:00pm on Wednesday"],
+  "npm": {
+    "minimumReleaseAge": "3 days"
+  },
+  "transitiveRemediation": true,
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["^vite", "^@vitejs/"],
+      "groupName": "vite stack"
+    },
+    {
+      "matchPackagePatterns": ["^@biomejs/"],
+      "groupName": "biome linter/formatter"
+    }
   ]
 }
