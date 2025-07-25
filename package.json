@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "docker:dev": "docker-compose up",
+    "docker:build": "docker build --target=prod -t glitchy-bits .",
+    "docker:preview": "docker run -p 8080:80 glitchy-bits",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "biome check .",
