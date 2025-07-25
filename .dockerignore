@@ -1,15 +1,35 @@
+# Development files
+renovate.json
+Dockerfile
+.dockerignore
+docker-compose.yml
+coverage
+
+# Build and cache directories
 node_modules
 dist
 dist-ssr
-*.local
+
+# Environment files
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
-coverage
+
+# Logs and temp files
 *.log
 .DS_Store
+*.tgz
+
+# IDE files
 .idea
 .vscode
-*.tgz
+
+# Misc
+.git
+*.local
+*.md
+.aider*
+ignore
+
