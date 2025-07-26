@@ -14,7 +14,10 @@
     "lint:apply": "biome check --write .",
     "lint:staged": "echo 'Running Biome linter...'; biome check --apply --no-errors-on-unmatched",
     "check:types": "echo 'Checking TypeScript types...'; tsc --noEmit",
-    "postinstall": "lefthook install"
+    "postinstall": "lefthook install",
+    "knip:check": "echo 'Running Knip check...' && knip",
+    "knip:apply": "echo 'Running Knip auto-fix...' && knip --fix --format",
+    "knip:prod": "echo 'Running Knip production check...' && knip --production --treat-config-hints-as-errors"
   },
   "dependencies": {
     "react": "19.1.0",

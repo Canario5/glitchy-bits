@@ -10,6 +10,8 @@ pre-commit:
       run: npm run lint:staged -- {staged_files}
     typecheck:
       run: npm run check:types
+    knip:
+      run: npm run knip:check
 
 commit-msg:
   commands:

@@ -20,6 +20,14 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 
+# Validation stage - runs quality checks and types
+FROM base AS validate
+WORKDIR /app
+COPY . .
+RUN npm run knip:prod && \
+    npm run lint:check && \
+    npm run check:types
+
 # Development stage
 FROM base AS dev
 WORKDIR /app
