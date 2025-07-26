@@ -1,0 +1,63 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on",
+        "useSortedAttributes": "on",
+        "useSortedKeys": "off",
+        "useSortedProperties": "on"
+      }
+    },
+    "enabled": true
+  },
+  "css": {
+    "formatter": {
+      "quoteStyle": "double"
+    }
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "includes": ["**/*.js", "**/*.ts", "**/*.jsx", "**/*.tsx", "**/*.json", "!renovate.json"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 115
+  },
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "double",
+      "quoteStyle": "single",
+      "semicolons": "always",
+      "trailingCommas": "all"
+    }
+  },
+  "linter": {
+    "domains": {
+      "project": "recommended"
+    },
+    "enabled": true,
+    "rules": {
+      "complexity": {
+        "noForEach": "info", //? https://biomejs.dev/linter/rules/no-for-each/
+        "noUselessThisAlias": "error" //? "info" -> "error"; https://biomejs.dev/linter/rules/no-useless-this-alias/
+      },
+      "nursery": {
+        "noConstantBinaryExpression": "error", //? "info" -> "error"; https://biomejs.dev/linter/rules/no-constant-binary-expression/
+        "noImportantStyles": "warn", //? style rule; https://biomejs.dev/linter/rules/no-important-styles/
+        "noTsIgnore": "error", //? "warn" -> "error"; https://biomejs.dev/linter/rules/no-ts-ignore/
+        "noUselessBackrefInRegex": "error" //? "warn" -> "error"; https://biomejs.dev/linter/rules/no-useless-backref-in-regex/
+      },
+      "recommended": true,
+      "style": {
+        "useComponentExportOnlyModules": "error" //? https://biomejs.dev/linter/rules/use-component-export-only-modules/
+      },
+      "suspicious": {
+        "noExplicitAny": "error" //? "warn" -> "error"; https://biomejs.dev/linter/rules/no-explicit-any/
+      }
+    }
+  },
+  "vcs": { "clientKind": "git", "defaultBranch": "main", "enabled": true, "useIgnoreFile": true }
+}
