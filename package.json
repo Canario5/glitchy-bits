@@ -9,10 +9,12 @@
     "docker:run": "docker run -p 8080:80 glitchy-bits",
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "biome check .",
-    "lint:fix": "biome check --write .",
-    "lint:staged": "biome check --staged .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint:check": "biome check .",
+    "lint:apply": "biome check --write .",
+    "lint:staged": "echo 'Running Biome linter...'; biome check --apply --no-errors-on-unmatched",
+    "check:types": "echo 'Checking TypeScript types...'; tsc --noEmit",
+    "postinstall": "lefthook install"
   },
   "dependencies": {
     "react": "19.1.0",
