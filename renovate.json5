@@ -89,6 +89,12 @@
       ],
     },
     {
+      description: 'Group Docker image digest updates together',
+      groupName: 'Docker image digests',
+      matchDatasources: ['docker'],
+      matchUpdateTypes: ['digest'],
+    },
+    {
       description: 'Group Node.js version updates in package.json, CI workflows, and Dockerfile.dev',
       matchDatasources: ['node-version'],
       matchFileNames: [
