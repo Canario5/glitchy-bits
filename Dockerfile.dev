@@ -1,6 +1,6 @@
-# syntax=docker/dockerfile:1@sha256:87999aa3d42bdc6bea60565083ee17e86d1f3339802f543c0d03998580f9cb89
+# syntax=docker/dockerfile:1@sha256:ecfaec9ed6d810b56388c508f4121597bfbba70d41a6dfeee4d8cad5f295fc32
 
-FROM mcr.microsoft.com/devcontainers/base:trixie@sha256:b60cd6e70901c42c23dc312b8e0cf2c704cad3acf65c55739ff1ef33a30166d2 AS dev
+FROM mcr.microsoft.com/devcontainers/base:trixie@sha256:025b74bb5f7ac53edd77e01aa7188c359aab100e23a2f6220bde50bbb9fd31dd AS dev
 
 # Note: The user vscode already exists by default in Microsofts base images
 ARG USERNAME=vscode
