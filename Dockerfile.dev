@@ -14,7 +14,7 @@ ARG PLAYWRIGHT_VERSION=1.62.1
 # renovate: datasource=github-releases depName=terrastruct/d2 versioning=semver extractVersion=^v(?<version>.*)$
 ARG D2_VERSION=0.7.1
 # renovate: datasource=github-releases depName=aquasecurity/trivy versioning=semver extractVersion=^v(?<version>.*)$
-ARG TRIVY_VERSION=0.71.2
+ARG TRIVY_VERSION=0.74.0
 
 USER root
 WORKDIR /app
