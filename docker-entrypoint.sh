@@ -10,7 +10,7 @@ echo ""
 #* Docker defaults to root permissions with created volumes
 if [ "$(id -u)" = "0" ]; then
   chown -R vscode:vscode /app/node_modules
-  chown vscode:vscode /home/vscode/.local
+  chown vscode:vscode /home/vscode/.local /home/vscode/.local/share
   chown -R vscode:vscode /home/vscode/.local/share/pnpm
 
   # Re-execute this script as vscode user; gosu is container sudo "downgrade" alternative
