@@ -50,10 +50,6 @@
         "noUselessThisAlias": "error"
         //? "info" -> "error"; https://biomejs.dev/linter/rules/no-useless-this-alias/
       },
-      "nursery": {
-        "noUnnecessaryConditions": "warn"
-        //? https://biomejs.dev/linter/rules/no-unnecessary-conditions/
-      },
       "performance": {
         "noBarrelFile": "warn",
         //? https://biomejs.dev/linter/rules/no-barrel-file/
