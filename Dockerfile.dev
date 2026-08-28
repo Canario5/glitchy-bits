@@ -12,7 +12,7 @@ ARG COREPACK_VERSION=0.35.0
 # renovate: datasource=npm depName=playwright
 ARG PLAYWRIGHT_VERSION=1.62.1
 # renovate: datasource=github-releases depName=terrastruct/d2 versioning=semver extractVersion=^v(?<version>.*)$
-ARG D2_VERSION=0.7.1
+ARG D2_VERSION=0.8.2
 # renovate: datasource=github-releases depName=aquasecurity/trivy versioning=semver extractVersion=^v(?<version>.*)$
 ARG TRIVY_VERSION=0.74.0
 
