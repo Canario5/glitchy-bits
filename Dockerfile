@@ -15,7 +15,7 @@ COPY . .
 RUN pnpm run build
 
 # Final production image (copies only built dist folder)
-FROM nginxinc/nginx-unprivileged:alpine-slim@sha256:d668aa123a6ec3216ba5ae6b398ae8001d5e81d3142d3659e20354fd0c3c3125 AS prod
+FROM nginxinc/nginx-unprivileged:alpine-slim@sha256:7d289d4f8935051d213bc3ecee3b4fc2d52f97ea5a954273e031054b633e7934 AS prod
 USER 101
 COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 8080
